@@ -10,12 +10,14 @@ A recording tool that allows you to use the Source Recorder with the ease of Fra
 - Designed to work with all source games and mods (built-in support for TF2 and CSGO)
 - Allows individual launch options and customizations for each game
 - F9 Start/Stop movie recording
+- Faster recording speeds (requires delete frames on process to be enabled (default))
 - Built-in frame blending
 - Improved gamma handling
 - Parallized image processing
 - Records OpenDML 2.0 compatible AVI files
 - Supports Video for Windows Codecs (VFW)
 - Compatible with HLAE/Lawena
+- No external dependencies or installations, just one executable
 
 # User Interface
 ## Main Window
