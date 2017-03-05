@@ -1,0 +1,50 @@
+// !!!WARNING: DO NOT EDIT UNLESS YOU KNOW WHAT YOU'RE DOING!!!
+// !!!LEAVING THIS FILE IN A CORRUPTED STATE WILL PREVENT THE AVI RECORDER FROM RUNNING!!!
+// !!!IN CASE OF EMERGENCY, RENAME THIS FILE AND AVI RECORDER WILL RECREATE THE DEFAULT SUPPORTED GAMES FILE!!!
+// 
+// Phew. This file contains the supported source games and mods. Each entry consists of the following:
+// 
+// "Team Fortress 2"
+// // refers to the name of the game
+// {
+//     "GameDir"		"<library>\\steamapps\\common\\Team Fortress 2\\tf"
+//     // refers to the game directory which must contain the cfg folder and optionally a custom folder
+//     
+//     "Executable"	"<library>\\steamapps\\common\\Team Fortress 2\\hl2.exe"
+//     // refers to the executable of the game that will be executed once recording starts
+//     
+//     "Arguments"		"-steam -game tf"
+//     // refers to the command line arguments the game needs in order to run.
+//     // This key is optional and will default to no arguments.
+//     
+//     "AppId"			"440"
+//     // refers to the steam Application ID, which is used to acquire the launch options of the game.
+//     // This key is optional for source games and should be left out for mods
+// }
+// 
+// The keys "GameDir" and "Executable" support two path variables:
+// 
+// <steam> - refers to the steam installation directory (e.g. "C:\Program Files (x86)\Steam")  
+// <library> - refers to any steam library folder
+// 
+// if "GameDir" contains a <library> variable, the first existing directory will be selected 
+// if "Executable" contains a <library> variable, the first existing file will be selected
+// If both "GameDir" and "Executable" contain a <library> variable, they must both exist within the same library
+
+"Games"
+{
+	"Team Fortress 2"
+	{
+		"GameDir"		"<library>\\steamapps\\common\\Team Fortress 2\\tf"
+		"Executable"	"<library>\\steamapps\\common\\Team Fortress 2\\hl2.exe"
+		"Arguments"		"-steam -game tf"
+		"AppId"			"440"
+	}
+	"Counter-Strike: Global Offensive"
+	{
+		"GameDir"		"<library>\\steamapps\\common\\Counter-Strike Global Offensive\\csgo"
+		"Executable"	"<library>\\steamapps\\common\\Counter-Strike Global Offensive\\csgo.exe"
+		"Arguments"		"-steam"
+		"AppId"			"730"
+	}
+}
