@@ -219,7 +219,7 @@
             this._framesToProcessLabel.Name = "_framesToProcessLabel";
             this._framesToProcessLabel.Size = new System.Drawing.Size(130, 23);
             this._framesToProcessLabel.TabIndex = 14;
-            this._framesToProcessLabel.Text = "Frames To Process:";
+            this._framesToProcessLabel.Text = "Frames to process:";
             this._framesToProcessLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // _aviTextBox
