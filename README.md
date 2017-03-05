@@ -102,15 +102,18 @@ All the available codecs are listed on the left side. I recommend using [MagicYU
 # FAQ
 **Q**: Can I use this with HLAE or Lawena?
 
-**A**: Yes, just untick "Start game and create recording configs".
+**A**: Yes, just untick "Start game and create recording configs". It will essentially then serve as a converter that when enabled processes all tga frames written to the tga folder and writes the avi files into the avi folder.
 
-**Q**: I want to report a bug, file an issue or suggest a new feature. How can I do it?
-
-**A**: Use the issue tab above and create a new issue.
+**Q**: The "Lagarith Lossless codec" gives me an error message
+**A**: There is a bug in lagarith where it indicates that it would have a state but actually doesn't. I will fix this in the next release either by not displaying there kinds of error messages or by making an exception for lagarith.
 
 **Q**: The source game / source mod I want to record for does not appear in the games list.
 
 **A**: You need to add the game to the index, which is located in the file "games.kv" (in the same directory as the program). If you successfully add a game, feel free to create a pull request and expand the list of games that are supported by default.
+
+**Q**: I want to report a bug, file an issue or suggest a new feature. How can I do it?
+
+**A**: Use the issue tab above and create a new issue.
 
 # Credits
 
