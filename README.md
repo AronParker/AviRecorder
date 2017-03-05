@@ -23,7 +23,7 @@ A recording tool that allows you to use the Source Recorder with the ease of Fra
 
 **Game settings**: The currently selected game and user.
 
-**Recording**: The currently selected recording settings. They appar in the following format: *<fps>* FPS (*<frame-blending-factor>*x, <shutter-angle>°), <video-compressor>
+**Recording**: The currently selected recording settings. They appar in the following format: *<fps>* FPS (*<frame-blending-factor>*x, <shutter-angle>Â°), <video-compressor>
 
 **Current movie**: Displays the file name of the current avi file that is being recorded.
 
@@ -75,7 +75,7 @@ Examples:
 
 **Frame blending factor**: The frame blending factor to use for the AVI file (meaning how many frames are recorded for one AVI frame).
 
-**Frames to process**: Sets how many of the frames that are recorded for one AVI frame are processed. This is used to simulate a shutter angle. For example, if you use a frame blending factor of 32 and set frames to process to 16 you'll achieve a shutter angle of 180°.
+**Frames to process**: Sets how many of the frames that are recorded for one AVI frame are processed. This is used to simulate a shutter angle. For example, if you use a frame blending factor of 32 and set frames to process to 16 you'll achieve a shutter angle of 180Â°.
 
 ### Video codec settings
 ![Video codec settings](images/recording-settings-codec.png)
@@ -84,7 +84,7 @@ All the available codecs are listed on the left side. I recommend using [MagicYU
 
 **Configure...**: Shows the configure dialog of the currently selected codec.
 
-**About...*: Shows the about dialog of the currently selected codec.
+**About...**: Shows the about dialog of the currently selected codec.
 
 ## About Window
 ![About Window](images/about.png)
@@ -105,8 +105,12 @@ A: You need to add the game to the index, which is located in the file "games.kv
 Aron Parker
 
 ## Thanks to
-Balázs - for making the best lossless codec
+BalÃ¡zs - for making the best lossless codec
+
 Carez - for helping with localization issues
+
 Casual - raising awareness of gamma errors
+
 CroftCreations - for helping out with CS:GO support
+
 Mark James - famfamfam silk icons
