@@ -70,8 +70,8 @@ namespace AviRecorder
 
         [DllImport("Msvfw32.dll")]
         public static extern VideoCompressorHandle ICOpen(uint fccType,
-                                                         uint fccHandler,
-                                                         IcMode mode);
+                                                          uint fccHandler,
+                                                          IcMode mode);
 
         [DllImport("Msvfw32.dll")]
         public static extern IntPtr ICClose(IntPtr hic);
