@@ -19,6 +19,13 @@ A recording tool that allows you to use the Source Recorder with the ease of Fra
 - Compatible with HLAE/Lawena
 - No external dependencies or installations, just one executable
 
+# Performance
+This program is designed to perform well and fast. In past recording tools it was common practice to copy files (entire huds and skyboxes) around every time you launch the game. This program avoids this by only moving directories and files between *gameDir*\custom and *gamedir*\custom_store. Moving files and directories is much cheaper than copying, because it basically only modifies the index instead of copying and creating new files.
+
+Secondly it records very efficiently aswell. The program by default deletes tga frames as soon as they are processed. This gives the Windows I/O Subsystem room for caching, essentially if tga frames are deleted soon enough it will never have to write them to disk in the first place. By default Windows uses "Write caching" on disk drives *(you can check this in the Device Manager to verify that it's enabled)*, meaning it has a small room to write files in memory before writing them to disk. If the recorded TGA frames are deleted soon enough, the buffer will never run out essentially giving you the performance of a RAMDisk or a virtual file system.
+
+Additionally frame blending is done in multi-core, meaning it uses all cores on your machine available to process them quickly and in parallel.
+
 # User Interface
 ## Main Window
 ![Main Window](images/main.png)
