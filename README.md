@@ -55,9 +55,10 @@ Ideally you should just click "Start recording", do all of your recordings and a
 **Startmovie commands**: The commands to run when starting a recording.
 
 Examples:
-| Game | Startmovie commands |
-| --- | --- |
-| Team Fortress 2 | engine_no_focus_sleep 0; r_cleardecals; snd_soundmixer Default_Mix; demo_resume; gameui_hide |
+
+| Game                             | Startmovie commands                                                                           |
+| -------------------------------- | --------------------------------------------------------------------------------------------- |
+| Team Fortress 2                  | engine_no_focus_sleep 0; r_cleardecals; snd_soundmixer Default_Mix; demo_resume; gameui_hide  |
 | Counter-Strike: Global Offensive | engine_no_focus_sleep 0; cl_draw_only_deathnotices 1; r_cleardecals; demo_resume; gameui_hide |
 
 **Endmovie commands**: The commands to run when a recording is stopped.
@@ -90,14 +91,17 @@ All the available codecs are listed on the left side. I recommend using [MagicYU
 ![About Window](images/about.png)
 
 # FAQ
-Q: Can I use this with HLAE or Lawena?
-A: Yes, just untick "Start game and create recording configs".
+**Q**: Can I use this with HLAE or Lawena?
 
-Q: I want to report a bug, file an issue or suggest a new feature. How can I do it?
-A: Use the issue tab above and create a new issue.
+**A**: Yes, just untick "Start game and create recording configs".
 
-Q: The source game / source mod I want to record for does not appear in the games list.
-A: You need to add the game to the index, which is located in the file "games.kv" (in the same directory as the program). If you successfully add a game, feel free to create a pull request and expand the list of games that are supported by default.
+**Q**: I want to report a bug, file an issue or suggest a new feature. How can I do it?
+
+**A**: Use the issue tab above and create a new issue.
+
+**Q**: The source game / source mod I want to record for does not appear in the games list.
+
+**A**: You need to add the game to the index, which is located in the file "games.kv" (in the same directory as the program). If you successfully add a game, feel free to create a pull request and expand the list of games that are supported by default.
 
 # Credits
 
