@@ -151,7 +151,6 @@ namespace AviRecorder.Forms
                                     "Failed to load video compressor",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
-                    return;
                 }
                 
                 if (form.ShowDialog() == DialogResult.OK)

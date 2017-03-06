@@ -45,13 +45,13 @@ namespace AviRecorder.Video.Compression
 
             for (var index = 0U; ICInfo(FourCC.VIDC, index, out var icInfo); index++)
                 using (var hic = ICOpen(FourCC.VIDC, icInfo.fccHandler, IcMode.Compress))
-                    if (!hic.IsInvalid && ICGetInfo(hic, ref icInfo, (uint)Marshal.SizeOf<ICINFO>()) != IntPtr.Zero && AcceptFlags(icInfo.dwFlags))
+                    if (!hic.IsInvalid && ICGetInfo(hic, ref icInfo, (uint)Marshal.SizeOf<ICINFO>()) != IntPtr.Zero && SupportsFlags(icInfo.dwFlags))
                         results.Add(new VideoCompressorInfo(ref icInfo));
 
             return results.ToArray();
         }
 
-        private static bool AcceptFlags(VideoCompressorFlags dwFlags)
+        private static bool SupportsFlags(VideoCompressorFlags dwFlags)
         {
             const VideoCompressorFlags unsupportedFlags = VideoCompressorFlags.Quality | VideoCompressorFlags.Crunch | VideoCompressorFlags.CompressFrames;
 
