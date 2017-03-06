@@ -53,9 +53,9 @@ Ideally you should just click "Start recording", do all of your recordings and a
 ## Game settings
 ![Game settings](images/game-settings.png)
 
-**Game:**: The source game or source mod to use for recording.
+**Game**: The source game or source mod to use for recording.
 
-**User:**: The steam user that uses this tool. This is currently only used for importing the correct launch options.
+**User**: The steam user that uses this tool. This is currently only used for importing the correct launch options.
 
 **Launch Options:**: The launch options to start the game with.
 
@@ -95,9 +95,6 @@ All the available codecs are listed on the left side. I recommend using [MagicYU
 **Configure...**: Shows the configure dialog of the currently selected codec.
 
 **About...**: Shows the about dialog of the currently selected codec.
-
-## About Window
-![About Window](images/about.png)
 
 # FAQ
 **Q**: Can I use this with HLAE or Lawena?
