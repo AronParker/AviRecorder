@@ -83,7 +83,7 @@ namespace AviRecorder.Steam
                 throw new SteamException("Unable to detect launch options: ", ex);
             }
 
-            var apps = localConfig?["Software"]?["Valve"]?["Steam"]?["apps"];
+            var apps = localConfig?["Software"]?["Valve"]?["Steam"]?["Apps"];
 
             if (apps == null)
                 return null;
