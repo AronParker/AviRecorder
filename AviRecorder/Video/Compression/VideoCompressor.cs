@@ -182,6 +182,12 @@ namespace AviRecorder.Video.Compression
 
         public byte[] GetState()
         {
+#if COMPATIBILITY
+            // lagarith lies about having a state while it doesn't really have one.
+            if (Info.FccHandler == FourCC.LAGS)
+                return null;
+#endif
+
             var getStateSize = StateSize;
 
             if (getStateSize <= 0)
@@ -205,6 +211,12 @@ namespace AviRecorder.Video.Compression
                 throw new ArgumentNullException(nameof(buffer));
             if (buffer.Length == 0)
                 throw new ArgumentException("The buffer must not be empty.", nameof(buffer));
+
+#if COMPATIBILITY
+            // lagarith lies about having a state while it doesn't really have one.
+            if (Info.FccHandler == FourCC.LAGS)
+                return;
+#endif
 
             var setState = ICSendMessage(_hic, IcMessage.SetState, buffer, (IntPtr)buffer.Length);
 

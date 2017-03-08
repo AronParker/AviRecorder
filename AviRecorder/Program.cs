@@ -3,8 +3,6 @@ using System.Windows.Forms;
 using AviRecorder.Controller;
 using AviRecorder.Forms;
 using AviRecorder.Steam;
-using AviRecorder.Core;
-using AviRecorder.KeyValues;
 
 namespace AviRecorder
 {
