@@ -32,11 +32,11 @@ Additionally frame blending is done in multi-core, meaning it uses all cores on 
 
 **Game settings**: The currently selected game and user.
 
-**Recording**: The currently selected recording settings. They appar in the following format: *%fps%* FPS (*%frame-blending-factor%*x, %shutter-angle%°), %video-compressor%.
+**Recording**: The currently selected recording settings. They appar in the following format: *FPS* (*%FrameBlendingFactor%*, %ShutterAngle%°), %VideoCompressor%.
 
-**Current movie**: Displays the file name of the current avi file that is being recorded.
+**Current movie**: Displays the file name of the current AVI file that is being recorded.
 
-**Last frame processed**: Displays the file name of the last processed tga frame.
+**Last frame processed**: Displays the file name of the last processed TGA frame.
 
 **Start game and create recording configs**: This option writes configs to support F9 start/stop recording. If you use a different recording tool like HLAE or Lawena, you can untick this checkbox so it will only serve as a converter from TGA frames to AVI files.
 
@@ -59,7 +59,7 @@ Ideally you should just click "Start recording", do all of your recordings and a
 
 **Launch Options:**: The launch options to start the game with.
 
-**Customization**: The customization files (.vpk files or folders in \custom) to use for the game. When starting the game, it will move all unused items from <gameDir>\custom\ to <gameDir>\custom_store. Likewise it will attempt to move any currently missing custom items from <gameDir>\custom_store\ to <gameDir>\custom\
+**Customization**: The customization files (.vpk files or folders in \custom) to use for the game. When starting the game, it will move all unused items from *gameDir*\custom\ to *gameDir>\custom_store. Likewise it will attempt to move any currently missing custom items from *gameDir*\custom_store\ to *gameDir*\custom\
 
 **Startmovie commands**: The commands to run when starting a recording.
 
@@ -99,7 +99,7 @@ All the available codecs are listed on the left side. I recommend using [MagicYU
 # FAQ
 **Q**: Can I use this with HLAE or Lawena?
 
-**A**: Yes, just untick "Start game and create recording configs". It will essentially then serve as a converter that when enabled processes all tga frames written to the tga folder and writes the avi files into the avi folder.
+**A**: Yes, just untick "Start game and create recording configs". It will essentially then serve as a converter that when enabled processes all tga frames written to the tga folder and writes the AVI files into the AVI folder.
 
 **Q**: The "Lagarith Lossless codec" gives me an error message
 **A**: There is a bug in lagarith where it indicates that it would have a state but actually doesn't. I will fix this in the next release either by not displaying there kinds of error messages or by making an exception for lagarith.
