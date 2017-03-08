@@ -475,8 +475,8 @@ namespace AviRecorder.Controller
             _process.StartInfo.FileName = _settings.CurrentGame.Executable;
             _process.StartInfo.Arguments = string.Join(" ",
                                                        _settings.CurrentGame.Arguments,
-                                                       gameSettings.GetLaunchOptions(),
-                                                       "+exec " + StartupConfig);
+                                                       "+exec " + StartupConfig,
+                                                       gameSettings.GetLaunchOptions());
             try
             {
                 _process.Start();
