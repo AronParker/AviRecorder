@@ -44,9 +44,15 @@ namespace AviRecorder.Video.Compression
             var results = new List<VideoCompressorInfo>();
 
             for (var index = 0U; ICInfo(FourCC.VIDC, index, out var icInfo); index++)
+            {
+                // logitech i420 codec crashes on 64 bit workaround until its fixed
+                if (Environment.Is64BitProcess && icInfo.fccHandler == 0x30323469)
+                    continue; 
+
                 using (var hic = ICOpen(FourCC.VIDC, icInfo.fccHandler, IcMode.Compress))
                     if (!hic.IsInvalid && ICGetInfo(hic, ref icInfo, (uint)Marshal.SizeOf<ICINFO>()) != IntPtr.Zero && SupportsFlags(icInfo.dwFlags))
                         results.Add(new VideoCompressorInfo(ref icInfo));
+            }
 
             return results.ToArray();
         }
