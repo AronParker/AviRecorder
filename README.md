@@ -32,7 +32,7 @@ Additionally frame blending is done in multi-core, meaning it uses all cores on 
 
 **Game settings**: The currently selected game and user.
 
-**Recording**: The currently selected recording settings. They appar in the following format: *%fps%* FPS (*%frame-blending-factor%*x, %shutter-angle%°), %video-compressor%
+**Recording**: The currently selected recording settings. They appar in the following format: *%fps%* FPS (*%frame-blending-factor%*x, %shutter-angle%°), %video-compressor%.
 
 **Current movie**: Displays the file name of the current avi file that is being recorded.
 
