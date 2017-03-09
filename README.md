@@ -55,11 +55,11 @@ Ideally you should just click "Start recording", do all of your recordings and a
 
 **Game**: The source game or source mod to use for recording.
 
-**User**: The steam user that uses this tool. This is currently only used for importing the correct launch options.
+**User**: The steam user that uses this tool. This is currently only used for importing the currect launch options.
 
-**Launch Options:**: The launch options to start the game with.
+**Launch Options:** The launch options to start the game with.
 
-**Customization**: The customization files (.vpk files or folders in \custom) to use for the game. When starting the game, it will move all unused items from *gameDir*\custom\ to *gameDir>\custom_store. Likewise it will attempt to move any currently missing custom items from *gameDir*\custom_store\ to *gameDir*\custom\
+**Customization**: The customization files (.vpk files or folders in \custom) to use for the game. When starting the game, it will move all unused items from *gameDir*\custom\ to *gameDir>\custom_store\. Likewise it will attempt to move any currently missing custom items from *gameDir*\custom_store\ to *gameDir*\custom\.
 
 **Startmovie commands**: The commands to run when starting a recording.
 
