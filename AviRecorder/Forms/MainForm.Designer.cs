@@ -59,6 +59,7 @@
             this._gameSettingsButton = new System.Windows.Forms.Button();
             this._gameSettingsTextBox = new System.Windows.Forms.TextBox();
             this._startGameCheckBox = new System.Windows.Forms.CheckBox();
+            this._toolTip = new System.Windows.Forms.ToolTip(this.components);
             this._footerPanel.SuspendLayout();
             this._notifyIconContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -356,5 +357,6 @@
         private System.Windows.Forms.ToolStripMenuItem _recordingSettingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator _toolStripSeparator2;
         private System.Windows.Forms.ToolStripSeparator _toolStripSeparator3;
+        private System.Windows.Forms.ToolTip _toolTip;
     }
 }

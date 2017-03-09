@@ -37,6 +37,15 @@ namespace AviRecorder.Forms
             _startGameCheckBox.CheckedChanged += StartGameCheckBox_CheckedChanged;
             _gameSettingsLabel.Enabled = _startGameCheckBox.Checked;
             _gameSettingsTextBox.Enabled = _startGameCheckBox.Checked;
+            
+            /*_toolTip.SetToolTip(_gameSettingsLabel, "The currently selected game and user.");
+            _toolTip.SetToolTip(_recordingSettingsLabel, "Recording: The currently selected recording settings. They appar in the following format: %FPS% (%FrameBlendingFactor%, %ShutterAngle%), %VideoCompressor%.");
+            _toolTip.SetToolTip(_currentMovieLabel, "Displays the file name of the current AVI file that is being recorded.");
+            _toolTip.SetToolTip(_lastFrameProcessedLabel, "Displays the file name of the last processed TGA frame.");
+            _toolTip.SetToolTip(_startGameCheckBox, "This option writes configs to support F9 start/stop recording. If you use a different recording tool like HLAE or Lawena, you can untick this checkbox so it will only serve as a converter from TGA frames to AVI files.");
+            _toolTip.SetToolTip(_aviLinkLabel, "Opens the currently set AVI folder.");
+            _toolTip.SetToolTip(_startButton, "Starts the recording process.");
+            _toolTip.SetToolTip(_aboutButton, "Displays the about dialog.");*/
 
             ChangeState(GameLauncherState.Idle);
         }

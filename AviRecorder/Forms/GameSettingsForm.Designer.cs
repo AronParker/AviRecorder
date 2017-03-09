@@ -50,6 +50,7 @@
             this._startmovieCommandsLabel = new System.Windows.Forms.Label();
             this._startmovieCommandsTextBox = new System.Windows.Forms.TextBox();
             this._endmovieCommandsTextBox = new System.Windows.Forms.TextBox();
+            this._toolTip = new System.Windows.Forms.ToolTip(this.components);
             this._customContextMenuStrip.SuspendLayout();
             this._footerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -315,5 +316,6 @@
         private System.Windows.Forms.Label _startmovieCommandsLabel;
         private System.Windows.Forms.TextBox _startmovieCommandsTextBox;
         private System.Windows.Forms.TextBox _endmovieCommandsTextBox;
+        private System.Windows.Forms.ToolTip _toolTip;
     }
 }

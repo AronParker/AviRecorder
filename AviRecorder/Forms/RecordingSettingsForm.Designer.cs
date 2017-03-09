@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this._recordingNotificationsCheckBox = new System.Windows.Forms.CheckBox();
             this._deleteOnCloseCheckBox = new System.Windows.Forms.CheckBox();
             this._instructionTextLabel = new System.Windows.Forms.Label();
@@ -53,6 +54,7 @@
             this._compressorTextBox = new System.Windows.Forms.TextBox();
             this._framesToProcessNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this._aviButton = new System.Windows.Forms.Button();
+            this._toolTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this._hostFramerateNumericUpDown)).BeginInit();
             this._footerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._frameRateNumericUpDown)).BeginInit();
@@ -378,5 +380,6 @@
         private System.Windows.Forms.TextBox _compressorTextBox;
         private System.Windows.Forms.NumericUpDown _framesToProcessNumericUpDown;
         private System.Windows.Forms.Button _aviButton;
+        private System.Windows.Forms.ToolTip _toolTip;
     }
 }

@@ -22,6 +22,14 @@ namespace AviRecorder.Forms
             _frameBlendingFactorNumericUpDown.Maximum = int.MaxValue;
             _framesToProcessNumericUpDown.Minimum = 1;
             _framesToProcessNumericUpDown.Maximum = _framesToProcessNumericUpDown.Value;
+
+            _toolTip.SetToolTip(_tgaLabel, "The folder where the game writes TGA files to.");
+            _toolTip.SetToolTip(_aviLabel, "The folder where the AVI files will be written to.");
+            _toolTip.SetToolTip(_compressorLabel, "Displays the name of currently used video codec");
+            _toolTip.SetToolTip(_frameRateLabel, "The frame rate of the AVI file.");
+            _toolTip.SetToolTip(_frameBlendingFactorLabel, "The frame blending factor to use for the AVI file (meaning how many frames are recorded for one AVI frame).");
+            _toolTip.SetToolTip(_framesToProcessLabel, "Sets how many of the frames that are recorded for one AVI frame are processed. This is used to simulate a shutter angle.\r\nFor example, if you use a frame blending factor of 32 and set frames to process to 16 you'll achieve a shutter angle of 180°.");
+            _toolTip.SetToolTip(_hostFramerateLabel, "Displays the host_framerate that source game or mod needs to use.");
         }
 
         public string TgaDirectory

@@ -35,6 +35,12 @@ namespace AviRecorder.Forms
 
             if (_userComboBox.SelectedIndex == -1)
                 _userComboBox.SelectedIndex = 0;
+
+            _toolTip.SetToolTip(_gameLabel, "The source game or source mod to use for recording.");
+            _toolTip.SetToolTip(_userLabel, "The steam user that uses this tool. This is currently only used for importing the current launch options.");
+            _toolTip.SetToolTip(_customLabel, "The customization files (.vpk files or folders in custom) to use for the game.\r\nWhen starting the game, it will move all unused items from custom to custom_store.\r\nLikewise it will attempt to move any currently missing custom items from custom_store to custom.");
+            _toolTip.SetToolTip(_startmovieCommandsLabel, "The commands to run when starting a recording.");
+            _toolTip.SetToolTip(_endmovieCommandsLabel, "The commands to run when a recording is stopped.");
         }
 
         public bool RecordingSettingsOnly
