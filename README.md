@@ -87,6 +87,8 @@ Examples:
 
 **Frames to process**: Sets how many of the frames that are recorded for one AVI frame are processed. This is used to simulate a shutter angle. For example, if you use a frame blending factor of 32 and set frames to process to 16 you'll achieve a shutter angle of 180°.
 
+**host_framerate**: Displays the host_framerate that source game or mod needs to use.
+
 ### Video codec settings
 ![Video codec settings](images/recording-settings-codec.png)
 
