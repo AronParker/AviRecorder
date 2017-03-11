@@ -3,7 +3,7 @@ using AviRecorder.KeyValues;
 
 namespace AviRecorder.Controller
 {
-    public class CompressorSettings
+    internal class CompressorSettings
     {
         public const string NoCompressor = "Uncompressed";
         public const string UnnamedCompressor = "Unnamed compressor";

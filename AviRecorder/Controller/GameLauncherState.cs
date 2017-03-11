@@ -1,6 +1,6 @@
 ﻿namespace AviRecorder.Controller
 {
-    public enum GameLauncherState
+    internal enum GameLauncherState
     {
         Idle,
         Recording,

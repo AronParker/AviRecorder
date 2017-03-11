@@ -9,8 +9,11 @@ using AviRecorder.Core;
 
 namespace AviRecorder.Controller
 {
-    public class Configuration
+    internal class Configuration
     {
+        private const string SettingsFile = "settings.kv";
+        private const string GamesFile = "games.kv";
+
         private Configuration(IReadOnlyList<SteamGameInfo> games, IReadOnlyList<SteamUserInfo> users, ApplicationSettings settings)
         {
             Games = games;
@@ -24,7 +27,7 @@ namespace AviRecorder.Controller
 
         public static Configuration Load()
         {
-            if (!File.Exists("games.kv"))
+            if (!File.Exists(GamesFile))
                 SaveDefaultGameData();
 
             var gameData = LoadGameData();
@@ -51,7 +54,7 @@ namespace AviRecorder.Controller
             KeyValue gameData;
             try
             {
-                gameData = KeyValue.Load("games.kv");
+                gameData = KeyValue.Load(GamesFile);
             }
             catch (Exception ex) when (ex is IOException ||
                                        ex is UnauthorizedAccessException ||
@@ -71,8 +74,8 @@ namespace AviRecorder.Controller
         {
             try
             {
-                if (File.Exists("settings.kv"))
-                    return KeyValue.Load("settings.kv");
+                if (File.Exists(SettingsFile))
+                    return KeyValue.Load(SettingsFile);
             }
             catch (Exception ex) when (ex is IOException ||
                                        ex is UnauthorizedAccessException ||
@@ -89,7 +92,7 @@ namespace AviRecorder.Controller
         {
             try
             {
-                File.WriteAllBytes("games.kv", Properties.Resources.games);
+                File.WriteAllBytes(GamesFile, Properties.Resources.games);
             }
             catch (Exception ex) when (ex is IOException ||
                                        ex is SecurityException ||
@@ -103,7 +106,7 @@ namespace AviRecorder.Controller
         {
             try
             {
-                Settings.ToKeyValue(Games).Save("settings.kv");
+                Settings.ToKeyValue(Games).Save(SettingsFile);
             }
             catch (Exception ex) when (ex is IOException ||
                                        ex is UnauthorizedAccessException ||

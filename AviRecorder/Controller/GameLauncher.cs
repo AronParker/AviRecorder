@@ -13,7 +13,7 @@ using AviRecorder.Video.TgaSequences;
 
 namespace AviRecorder.Controller
 {
-    public class GameLauncher : IDisposable
+    internal class GameLauncher : IDisposable
     {
         private const string StartupConfig = "avi_recorder_startup.cfg";
         private const string StartConfig = "avi_recorder_start.cfg";

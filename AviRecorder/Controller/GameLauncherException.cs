@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace AviRecorder.Controller
 {
     [Serializable]
-    public class GameLauncherException : Exception
+    internal class GameLauncherException : Exception
     {
         public GameLauncherException()
         {
