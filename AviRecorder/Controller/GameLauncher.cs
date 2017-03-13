@@ -382,18 +382,7 @@ namespace AviRecorder.Controller
             {
                 try
                 {
-                    try
-                    {
-                        FileSystem.DeleteFile(game.GameDir + "\\cfg\\" + StartupConfig, true);
-                        FileSystem.DeleteFile(game.GameDir + "\\cfg\\" + StartConfig, true);
-                        FileSystem.DeleteFile(game.GameDir + "\\cfg\\" + StopConfig, true);
-                    }
-                    catch (Exception ex) when (ex is IOException ||
-                                               ex is UnauthorizedAccessException ||
-                                               ex is SecurityException)
-                    {
-                        throw new GameLauncherException("Unable to delete recording config: " + ex.Message, ex);
-                    }
+                    DeleteStartupStartAndStopConfigs(game);
 
                     game.RevertCustom(gameSettings.GetCustom(),
                                       _lastActiveCustom,
@@ -411,6 +400,22 @@ namespace AviRecorder.Controller
                         break;
                     }
                 }
+            }
+        }
+
+        private static void DeleteStartupStartAndStopConfigs(SteamGameInfo game)
+        {
+            try
+            {
+                FileSystem.DeleteFile(game.GameDir + "\\cfg\\" + StartupConfig, true);
+                FileSystem.DeleteFile(game.GameDir + "\\cfg\\" + StartConfig, true);
+                FileSystem.DeleteFile(game.GameDir + "\\cfg\\" + StopConfig, true);
+            }
+            catch (Exception ex) when (ex is IOException ||
+                                       ex is UnauthorizedAccessException ||
+                                       ex is SecurityException)
+            {
+                throw new GameLauncherException("Unable to delete recording config: " + ex.Message, ex);
             }
         }
 
