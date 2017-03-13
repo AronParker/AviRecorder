@@ -9,7 +9,7 @@ using AviRecorder.Core;
 
 namespace AviRecorder.Controller
 {
-    internal class Configuration
+    public class Configuration
     {
         private const string SettingsFile = "settings.kv";
         private const string GamesFile = "games.kv";

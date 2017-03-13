@@ -7,7 +7,7 @@ using AviRecorder.Video.TgaSequences;
 
 namespace AviRecorder.Controller
 {
-    internal class ApplicationSettings
+    public class ApplicationSettings
     {
         public const bool DefaultStartGame = true;
         public const string DefaultTgaDirectory = "";

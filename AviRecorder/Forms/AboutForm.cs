@@ -37,7 +37,9 @@ namespace AviRecorder.Forms
         {
             try
             {
-                Process.Start((string)e.Link.LinkData);
+                using (Process.Start((string)e.Link.LinkData))
+                {
+                }
             }
             catch (Win32Exception ex)
             {
