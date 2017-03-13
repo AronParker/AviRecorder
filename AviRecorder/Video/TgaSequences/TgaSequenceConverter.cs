@@ -13,7 +13,7 @@ namespace AviRecorder.Video.TgaSequences
     {
         public const int MaxSupportedFrameRate = int.MaxValue - AviFileWriter.AudioSamples;
 
-        private const int MaxSharingViolations = 30;
+        private const int MaxSharingViolations = 50;
         private const int SharingViolationRetryDelay = 100;
         
         private TargaImageLoader _tgaLoader;
