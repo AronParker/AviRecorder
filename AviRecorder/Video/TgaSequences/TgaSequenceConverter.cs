@@ -203,7 +203,7 @@ namespace AviRecorder.Video.TgaSequences
             }
             else if (_deleteOnClose)
             {
-                DeleteTga(tgaPath);
+                DeleteFile(tgaPath);
             }
 
             if (_frameIndex++ == _frameBlendingIndex)
@@ -298,7 +298,7 @@ namespace AviRecorder.Video.TgaSequences
                     _audioStream.Dispose();
 
                     if (_deleteOnClose)
-                        DeleteWav(_audioStream.Name);
+                        DeleteFile(_audioStream.Name);
 
                     _audioStream = null;
                 }
@@ -338,7 +338,7 @@ namespace AviRecorder.Video.TgaSequences
             }
         }
 
-        private static void DeleteTga(string path)
+        private static void DeleteFile(string path)
         {
             try
             {
@@ -364,21 +364,7 @@ namespace AviRecorder.Video.TgaSequences
                                        ex is UnauthorizedAccessException ||
                                        ex is SecurityException)
             {
-                throw new RecoverableException("An error occured while attempting to delete the frame: " + ex.Message, ex);
-            }
-        }
-
-        private static void DeleteWav(string path)
-        {
-            try
-            {
-                File.Delete(path);
-            }
-            catch (Exception ex) when (ex is IOException ||
-                                       ex is UnauthorizedAccessException ||
-                                       ex is SecurityException)
-            {
-                throw new RecoverableException("An error occured while attempting to delete the frame: " + ex.Message, ex);
+                throw new RecoverableException("An error occured while attempting to delete the file: " + ex.Message, ex);
             }
         }
 
