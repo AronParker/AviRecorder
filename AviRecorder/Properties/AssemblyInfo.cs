@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Recording tool for Source-based games.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Aron Parker")]
-[assembly: AssemblyProduct("AviRecorder")]
+[assembly: AssemblyProduct("Avi Recorder")]
 [assembly: AssemblyCopyright("© 2017 by Aron Parker, All Rights Reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
