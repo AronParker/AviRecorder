@@ -240,7 +240,7 @@ namespace AviRecorder.Video.TgaSequences
                     _avi.WriteAudioData(_audioBuffer, 0, bytesToWrite);
 
                     if (_audioBufferLength > bytesToWrite)
-                        Array.Copy(_audioBuffer, bytesToWrite, _audioBuffer, 0, _audioBufferLength - bytesToWrite);
+                        Buffer.BlockCopy(_audioBuffer, bytesToWrite, _audioBuffer, 0, _audioBufferLength - bytesToWrite);
 
                     _audioBufferLength -= bytesToWrite;
                     _audioSamplesAvailable -= (int)((uint)bytesToWrite >> 2);
@@ -268,7 +268,7 @@ namespace AviRecorder.Video.TgaSequences
                     _avi.WriteAudioData(_audioBuffer, 0, bytesToWrite);
 
                     if (_audioBufferLength > bytesToWrite)
-                        Array.Copy(_audioBuffer, bytesToWrite, _audioBuffer, 0, _audioBufferLength - bytesToWrite);
+                        Buffer.BlockCopy(_audioBuffer, bytesToWrite, _audioBuffer, 0, _audioBufferLength - bytesToWrite);
 
                     _audioBufferLength -= bytesToWrite;
                 }
