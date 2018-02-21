@@ -52,21 +52,41 @@ namespace AviRecorder.Video.Compression
 #endif
 
                 using (var hic = ICOpen(FourCC.VIDC, icInfo.fccHandler, IcMode.Compress))
-                    if (!hic.IsInvalid && ICGetInfo(hic, ref icInfo, (uint)Marshal.SizeOf<ICINFO>()) != IntPtr.Zero && SupportsFlags(icInfo.dwFlags))
-                        results.Add(new VideoCompressorInfo(ref icInfo));
+                {
+                    if (hic.IsInvalid)
+                        continue;
+
+                    if (ICGetInfo(hic, ref icInfo, (uint)Marshal.SizeOf<ICINFO>()) == IntPtr.Zero)
+                        continue;
+                    
+                    if (!SupportsVideoCompressor(ref icInfo))
+                        continue;
+
+                    results.Add(new VideoCompressorInfo(ref icInfo));
+                }
             }
 
             return results.ToArray();
         }
 
-        private static bool SupportsFlags(VideoCompressorFlags dwFlags)
+        private static bool SupportsVideoCompressor(ref ICINFO icInfo)
         {
-            const VideoCompressorFlags unsupportedFlags = VideoCompressorFlags.Quality | VideoCompressorFlags.Crunch | VideoCompressorFlags.CompressFrames;
+#if COMPATIBILITY
+            if (icInfo.fccHandler == FourCC.x264)
+                return true;
+#endif
 
-            if ((dwFlags & unsupportedFlags) != 0)
+            const VideoCompressorFlags unsupportedFlags = VideoCompressorFlags.Quality |
+                                                          VideoCompressorFlags.Crunch |
+                                                          VideoCompressorFlags.CompressFrames;
+
+            if ((icInfo.dwFlags & unsupportedFlags) != 0)
                 return false;
 
-            return (dwFlags & VideoCompressorFlags.Temporal) == 0 || (dwFlags & VideoCompressorFlags.FastTemporalC) != 0;
+            bool requiresPreviousFrame = (icInfo.dwFlags & VideoCompressorFlags.Temporal) != 0 &&
+                                         (icInfo.dwFlags & VideoCompressorFlags.FastTemporalC) == 0;
+
+            return !requiresPreviousFrame;
         }
     }
 }

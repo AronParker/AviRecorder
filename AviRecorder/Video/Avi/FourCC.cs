@@ -40,6 +40,7 @@ namespace AviRecorder.Video.Avi
 #if COMPATIBILITY
         public const uint i420 = 'i' << 0 | '4' << 8 | '2' << 16 | '0' << 24;
         public const uint LAGS = 'L' << 0 | 'A' << 8 | 'G' << 16 | 'S' << 24;
+        public const uint x264 = 'X' << 0 | '2' << 8 | '6' << 16 | '4' << 24;
 #endif
 
         public static uint Make(string fcc)
